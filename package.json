@@ -1,0 +1,22 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "A note app which uses google authentication for login.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --timeout 15000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "foo"
+  },
+  "keywords": [
+    "nodejs",
+    "google",
+    "authentication",
+    "note-app",
+    "express"
+  ],
+  "author": "Adeboye Emmanuel (https://github.com/devadeboye/)",
+  "license": "Apache-2.0"
+}
