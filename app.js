@@ -8,6 +8,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 const methodOverride = require('method-override');
+const formatDate = require('./helpers/formatDate')
 
 const PORT = 3000;
 // passport config
@@ -17,7 +18,14 @@ require('./config/passport')(passport)
 dotenv.config();
 connectDB();
 
-app.engine('.hbs', expressHandlebars({defaultLayout: 'main', 'extname': '.hbs'}));
+app.engine(
+    '.hbs',
+    expressHandlebars({
+        defaultLayout: 'main',
+        'extname': '.hbs',
+        helpers: {formatDate}
+    }),
+);
 
 app.set('view engine', '.hbs');
 
